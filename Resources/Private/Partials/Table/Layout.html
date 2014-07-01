@@ -1,0 +1,17 @@
+{namespace c=Famelo\Components\ViewHelpers}
+<c:process objects="{entities}" processors="{listProcessors}">
+	<div class="row">
+		<div class="col-xs-9">
+			<c:block name="top"/>
+			<table class="table table-bordered table-striped">
+				<c:render partial="Table/Header" />
+				<c:render partial="Table/Body" />
+			</table>
+			<c:block name="bottom" />
+			<f:render partial="Pagination" arguments="{action: 'index', pagination: pagination, limits: limits}" />
+		</div>
+		<div class="col-xs-3">
+			<c:block name="sidebar" />
+		</div>
+	</div>
+</c:process>

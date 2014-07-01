@@ -1,0 +1,21 @@
+Famelo:
+  Components:
+    FieldTypes:
+      string: 'Textfield'
+      integer: 'Textfield'
+      float: 'Textfield'
+      boolean: 'Checkbox'
+      array: 'Select'
+
+  Messaging:
+    defaultFrom:
+      mneuhaus@famelo.com: 'Marc Neuhaus'
+
+    # Redirect all messages to this E-Mail
+    # for testing purposes
+    # redirectAllMessagesTo: foo@bar.com
+
+TYPO3:
+  SwiftMailer:
+    transport:
+      type: '\Famelo\Messaging\Transport\DebugTransport'

@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+{namespace c=Famelo\Components\ViewHelpers}
+
+<f:section name="Content">
+	<div class="actions">
+		<f:link.action action="new" class="btn btn-primary pull-right">New</f:link.action>
+	</div>
+	<f:if condition="{entities}">
+		<f:then>
+			<c:render partial="Table/Layout"/>
+		</f:then>
+		<f:else>
+			<p>No entities found.</p>
+		</f:else>
+	</f:if>
+</f:section>

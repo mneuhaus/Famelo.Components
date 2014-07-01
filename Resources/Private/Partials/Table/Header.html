@@ -1,0 +1,11 @@
+{namespace c=Famelo\Components\ViewHelpers}
+<f:if condition="{listFields}">
+	<tr>
+		<f:for each="{listFields}" as="field">
+			<th>
+				<c:wrap name="field" arguments="{field: field}"><i class="fa"></i> {field -> c:format.humanizeCamelCase()}</c:wrap>
+			</th>
+		</f:for>
+		<th></th>
+	</tr>
+</f:if>

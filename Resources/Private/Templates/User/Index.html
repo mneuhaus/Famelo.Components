@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+  <div class="row">
+    <div class="col-xs-8">
+      <f:form action="authenticate" method="post" class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Benutzername</label>
+          <div class="col-sm-10">
+            <f:form.textfield name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" placeholder="Benutzername" tabindex="1" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Passwort</label>
+          <div class="col-sm-10">
+            <f:form.password  name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" placeholder="Passwort" tabindex="2" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Anmelden</button>
+          </div>
+        </div>
+      </f:form>
+    </div>
+    <div class="col-xs-4">
+      <ul class="nav bs-sidenav">
+          <li>
+<!--               <f:link.action action="forgotPassword">
+                <span class="glyphicon glyphicon-envelope"></span> &nbsp; Passwort vergessen
+              </f:link.action> -->
+          </li>
+      </ul>
+    </div>
+</f:section>
